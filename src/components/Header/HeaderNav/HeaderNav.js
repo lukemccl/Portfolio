@@ -8,7 +8,7 @@ export default class HeaderNav extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: 'home' })
+    this.setState({ activeItem: '/'+name })
   }
 
   render() {
