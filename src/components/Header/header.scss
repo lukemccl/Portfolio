@@ -6,7 +6,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-    padding-left: 500px;
+    padding-left: 25vw;
     align-items: right;
     list-style-type: none;
 }
@@ -18,13 +18,13 @@
 }
 
 .nameBar{
-    padding-left: 10px;
-    padding-top: 30px;
-    font-size: 25px;
+    padding-left: 0vw;
+    padding-top: 1.5vw;
+    font-size: 1.25vw;
 }
 
 .headerMenuItem{
-    font-size: 20px;
+    font-size: 1vw;
 }
 
 .ui.image {
@@ -42,7 +42,6 @@
     height: 75px;
     border-radius: 50%;
     margin-right: 1vw;
-    margin-left: 1vw;
 
     filter: invert(0%);
     &:hover{

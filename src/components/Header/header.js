@@ -3,7 +3,6 @@ import { Segment } from 'semantic-ui-react'
 import HeaderNav from "./HeaderNav/HeaderNav"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-//import styles from '../../page.module.scss';
 import'./header.scss'
 import LinkedIn from './linkedIn.svg';
 import GitHub from './github.svg'
@@ -21,7 +20,7 @@ export default class Header extends Component{
                 <div className="nameBar">Luke McClure</div>
               </div>
             </div>
-            <div className="right aligned column" style={{paddingLeft:"100px"}}>
+            <div className="right aligned column" style={{paddingLeft:"5.6vw"}}>
               <HeaderNav/>
             </div>
             <div className="right aligned column">
