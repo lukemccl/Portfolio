@@ -8,7 +8,8 @@ export default class HeaderNav extends Component {
   state = { activeItem: this.getStartPage() }
 
   getStartPage() {
-    return window.location.href.split('/')[3]
+    let urlbreakdown = window.location.href.split('/')
+    return urlbreakdown[3].length>0 ? urlbreakdown[3] : 'home'
   }
 
   handleItemClick = (e, { name }) => {
