@@ -5,14 +5,17 @@ import { Link } from "react-router-dom";
 import '../header.scss';
 
 export default class HeaderNav extends Component {
-  state = { activeItem: 'home' }
+  state = { activeItem: this.getStartPage() }
+
+  getStartPage() {
+    return window.location.href.split('/')[3]
+  }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: '/'+name })
+    this.setState({ activeItem: name })
   }
 
   render() {
-
     const { activeItem } = this.state
 
     return (
