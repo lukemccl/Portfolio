@@ -6,32 +6,25 @@
     display: flex;
     margin: 0;
     padding: 0;
-
+    padding-left: 500px;
     align-items: right;
-    justify-content: space-between;
     list-style-type: none;
-
-    li{
-        
-        
-        margin-top: 1vw;
-        img {
-
-            filter: invert(41%);
-            &:hover{
-                filter: invert(100%);
-            }
-        }
-    }
 }
 
-.profile{
-    font-size: 30px;
-    margin: 10px;
-    img{
-        width: 50px;
-        height: 50px;
-    }
+.profileBar{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nameBar{
+    padding-left: 10px;
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+.headerMenuItem{
+    font-size: 20px;
 }
 
 .ui.image {
@@ -43,3 +36,16 @@
         filter: invert(100%);
     }
   }
+
+  .profilePic.ui.image{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 1vw;
+    margin-left: 1vw;
+
+    filter: invert(0%);
+    &:hover{
+        filter: invert(0%);
+    }
+}

@@ -3,7 +3,8 @@ import { Segment } from 'semantic-ui-react'
 import HeaderNav from "./HeaderNav/HeaderNav"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import styles from './header.scss';
+//import styles from '../../page.module.scss';
+import'./header.scss'
 import LinkedIn from './linkedIn.svg';
 import GitHub from './github.svg'
 import Profile from "../../userpic.jpg"
@@ -11,25 +12,27 @@ import Profile from "../../userpic.jpg"
 export default class Header extends Component{
   render(){
     return(
-      <Segment className = {styles.headerBar} inverted>
-        <div class="ui middle aligned centred equal width grid">
-          <div class="three column centered row">
-            <div class="left aligned column">
-              <img src={Profile} alt="Profile" style={{width : '75px', height : '75px', borderRadius: '50%', paddingRight: "5px"}}/>
-              Luke McClure
+      <Segment inverted>
+        <div className="ui middle aligned grid">
+          <div className="three column centered row">
+            <div className="left aligned column">
+              <div className="profileBar"> 
+                <img className="profilePic ui image"src={Profile} alt="Profile picture"/>
+                <div className="nameBar">Luke McClure</div>
+              </div>
             </div>
-            <div class="right aligned column">
+            <div className="right aligned column" style={{paddingLeft:"100px"}}>
               <HeaderNav/>
             </div>
-            <div class="right aligned column">
-              <ul style={{listStyleType: "none"}}>
+            <div className="right aligned column">
+              <ul className="linksList">
                 <li>
-                  <a href="https://github.com/lukemccl"  class="ui image">
+                  <a href="https://github.com/lukemccl"  className="ui image" style={{paddingRight:"0px"}}>
                     <img src={GitHub} alt="GitHub"/>
                   </a>
                 </li>
                 <li style={{paddingTop: "2px"}}>
-                  <a href="https://www.linkedin.com/in/luke-mcclure/" class="ui image">
+                  <a href="https://www.linkedin.com/in/luke-mcclure/" className="ui image">
                     <img src={LinkedIn} alt="LinkedIn"/>
                   </a>
                 </li>

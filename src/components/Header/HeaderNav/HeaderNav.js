@@ -2,37 +2,40 @@ import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 
+import '../header.scss';
+
 export default class HeaderNav extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name })
+    this.setState({ activeItem: 'home' })
   }
 
   render() {
+
     const { activeItem } = this.state
 
     return (
-        <Menu  inverted pointing secondary>
-          <Menu.Item           
+        <Menu inverted pointing secondary>
+          <Menu.Item className="headerMenuItem"
             name='home'
             active={activeItem === 'home'}
             onClick={this.handleItemClick}
             as={Link}  to='/home'
           />
-          <Menu.Item 
+          <Menu.Item className="headerMenuItem"  
             name='projects'
             active={activeItem === 'projects'}
             onClick={this.handleItemClick}
             as={Link}  to='/projects'
           />
-          <Menu.Item 
+          <Menu.Item className="headerMenuItem"  
             name='passions'
             active={activeItem === 'passions'}
             onClick={this.handleItemClick}
             as={Link}  to='/passions'
           />
-          <Menu.Item 
+          <Menu.Item className="headerMenuItem"  
             name='contact'
             active={activeItem === 'contact'}
             onClick={this.handleItemClick}
