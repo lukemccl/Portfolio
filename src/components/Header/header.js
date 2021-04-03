@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import'./header.scss'
 import LinkedIn from './linkedIn.svg';
 import GitHub from './github.svg'
-import Profile from "../../userpic.jpg"
 
 export default class Header extends Component{
   render(){
