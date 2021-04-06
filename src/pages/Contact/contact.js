@@ -13,7 +13,7 @@ import cv from '../../resources/cv.svg'
 export default class Contact extends Component {
     render() {
         const LinkedInPlatform = <PlatformIcon name="LinkedIn"   imgSource={linkedin}       link="https://www.linkedin.com/in/luke-mcclure/"/>
-        const EmailPlatform    = <PlatformIcon name="lukemcclure71@gmail.com"      imgSource={email}          link="mailto:lukemcclure71@gmail.com"/>
+        const EmailPlatform    = <PlatformIcon name="Email"      imgSource={email}          link="mailto:lukemcclure71@gmail.com"/>
         const InstaPlatform    = <PlatformIcon name="Instagram"  imgSource={instagram}      link="https://www.instagram.com/l.mccl/"/>
         const GHPlatform       = <PlatformIcon name="GitHub"     imgSource={github}      link="https://github.com/lukemccl"/>        
         const PhonePlatform    = <PlatformIcon name="Phone"      imgSource={smartphone}/>
