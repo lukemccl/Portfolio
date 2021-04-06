@@ -15,7 +15,7 @@ export default class Header extends Component{
           <div className="three column centered row">
             <div className="left aligned column">
               <div className="profileBar"> 
-                <img className="profilePic ui image"src="https://avatars.githubusercontent.com/u/32748875" alt="Profile picture"/>
+                <img className="profilePic ui image"src="https://avatars.githubusercontent.com/u/32748875" alt="GitHub Profile"/>
                 <div className="nameBar">Luke McClure</div>
               </div>
             </div>

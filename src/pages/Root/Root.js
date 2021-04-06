@@ -25,6 +25,7 @@ function Root() {
             <Route component={NotFound} />
         </Switch>
        </Router>
+       <footer>This is a placeholder footer</footer>
     </div>
   );
 }
