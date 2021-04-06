@@ -8,7 +8,7 @@ class PlatformIcon extends Component{
   render(){
     const inner = 
     <div className="sectionBackground" style={{backgroundColor: this.props.color ? this.props.color : '#e4e7ed'}}>
-        <img className="platformIcon" src={this.props.imgSource}/>
+        <img className="platformIcon" src={this.props.imgSource} alt="Platform Logo"/>
         <p>{this.props.name}</p>
     </div>
     return this.props.link ? 
