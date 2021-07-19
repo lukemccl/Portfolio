@@ -1,48 +1,41 @@
 {
   "name": "lukemccl.github.io",
-  "homepage": "https://lukemccl.github.io",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.3",
-    "bootstrap": "^4.6.0",
-    "node-sass": "^5.0.0",
-    "react": "^17.0.1",
-    "react-bootstrap": "^1.5.0",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "sass": "^1.32.8",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3",
-    "web-vitals": "^1.1.0"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.tsx",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukemccl/lukemccl.github.io.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukemccl/lukemccl.github.io/issues"
+  },
+  "homepage": "https://github.com/lukemccl/lukemccl.github.io#readme",
+  "devDependencies": {
+    "@types/node": "^16.3.3",
+    "nodemon": "^2.0.12",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.24",
+    "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/semantic-ui": "^2.2.7",
+    "react": "^17.0.2",
+    "semantic-ui-react": "^2.0.3"
   }
 }

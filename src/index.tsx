@@ -1,7 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import './index.css';
-import Root from './pages/Root/Root.js';
+import Root from './pages/Root/Root';
 import 'semantic-ui-css/semantic.min.css'
 import reportWebVitals from './reportWebVitals';
 

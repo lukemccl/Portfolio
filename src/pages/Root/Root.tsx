@@ -11,7 +11,7 @@ import Passions from "../Passions/passions"
 import Contact from "../Contact/contact"
 import NotFound from "../404/notfound"
 
-function Root() {
+const Root = () => {
   return (
     <div className="Root">
       <Router>
