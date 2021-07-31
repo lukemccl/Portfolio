@@ -1,0 +1,42 @@
+.ui.icon.link {
+
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all .1s ease-in-out;
+    color:black;
+    
+    &:link {
+        color:black
+    }
+
+    &:visited {
+        color:black
+    }
+
+    &:hover {
+        color:black !important;
+        transform: scale(1.1);
+    }
+}
+
+.ui.icon.container {
+
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all .1s ease-in-out;
+    color:black;
+    
+    &:link {
+        color:black
+    }
+
+    &:visited {
+        color:black
+    }
+
+    &:hover {
+        color:black !important;
+        transform: scale(1.1);
+    }
+
+}

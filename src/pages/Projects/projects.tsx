@@ -7,7 +7,6 @@ const Projects = () => {
     
     return(
         <div className={styles.gridcontainer}>
-
             <HoverDisplay 
                 title="Gym Form Check"
                 desc = "A Computer Vision project to classify correct form in gym."

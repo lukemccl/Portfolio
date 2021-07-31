@@ -17,12 +17,12 @@ const Root = () => {
       <Router>
         <Header />
         <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path="/home" component={Home}></Route>
-            <Route exact path="/projects" component={Projects}></Route>
-            <Route exact path="/passions" component={Passions}></Route>
-            <Route exact path="/contact" component={Contact}></Route>
-            <Route component={NotFound} />
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/home" component={Home}></Route>
+          <Route exact path="/projects" component={Projects}></Route>
+          <Route exact path="/passions" component={Passions}></Route>
+          <Route exact path="/contact" component={Contact}></Route>
+          <Route component={NotFound} />
         </Switch>
        </Router>
        <footer>This is a placeholder footer</footer>

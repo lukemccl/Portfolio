@@ -30,29 +30,29 @@ const HoverDisplay = (props : DisplayBoxProps) => {
         );
     }
 
-    const backgroundContent = ({title, background, onHover} : DisplayBoxProps) => {
-        if (onHover === 'video') {
+    const backgroundContent = (props : DisplayBoxProps) => {
+        if (props.onHover === 'video') {
             return (
                 <div>
                     <video 
                         disableRemotePlayback 
-                        id={title} 
+                        id={props.title} 
                         loop 
                         muted 
                         playsInline
                         onMouseOver={hoverOn}
                         onMouseOut={hoverOff}
                     >
-                        <source src={background} type="video/mp4"/>
+                        <source src={props.background} type="video/mp4"/>
                     </video>
                     {textContent}
                 </div>
             );
         } 
-        if (onHover === 'img') {
+        if (props.onHover === 'img') {
             return (
                 <div>
-                    <img src={background} alt={title}/>
+                    <img src={props.background} alt={props.title}/>
                     {textContent}
                 </div>
             );
@@ -60,16 +60,15 @@ const HoverDisplay = (props : DisplayBoxProps) => {
     }
 
     return (
-        props.background ? 
-        <div className={styles.project}>
+        props.background 
+        ? <div className={styles.project}>
             <a href={props.link}>
                 {backgroundContent}
             </a>
-        </div>
-        :
-        <div className={styles.more}>
+          </div>
+        : <div className={styles.more}>
             {textContent}
-        </div>
+          </div>
     );
 }
 

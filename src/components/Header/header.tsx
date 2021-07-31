@@ -1,6 +1,5 @@
 import { Segment } from 'semantic-ui-react'
 import HeaderNav from "./HeaderNav/HeaderNav"
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import'./header.scss'
 import LinkedIn from './linkedIn.svg';
