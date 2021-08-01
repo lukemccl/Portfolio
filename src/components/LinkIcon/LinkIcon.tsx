@@ -9,23 +9,23 @@ interface IconProps {
 
 const linkIcon = (props: IconProps) => {
     
+  const icon = (
+    <Icon
+      name={props.name}
+      size='huge'
+      link
+      color='black'
+    />
+  );
   return (
     props.link
     ? <a className='ui icon link' href={props.link}>
-        <Icon
-          name={props.name}
-          size='huge'
-          link
-        />
+        {icon}
         <br/>
         {props.body}
       </a>
     : <div className='ui icon container'>
-        <Icon
-          name={props.name}
-          size='huge'
-          link
-        />
+        {icon}
         <br/>
         {props.body}
       </div>
