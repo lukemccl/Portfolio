@@ -92,21 +92,8 @@
     font-size: large;
 }
 
-.hoverDisplayContainer {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.hoverDisplay {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+.bigGrid {
+    max-width: 95vw;
 }
 
 .hoverDisplayCard {
@@ -120,27 +107,26 @@
     min-height: 20vh;
     height: 50%;
     display: flex;
-    
+    max-width: 90vw;
+
     .project {
         color: white;
         display: flex;
-  
+        max-width: 90vw;
         a {
             padding: 0;
             margin: 0;
             position: relative;
             min-width: 10px;
             min-height: 10px;
-            max-width: 480px;
-            max-height: 360px;
+            max-width: 90vw;
         }
 
         video, img {
             padding: 0;
             margin: 0;
             position: relative;
-            max-width: 480px;
-            max-height: 360px;
+            max-width: 90vw;
             filter: blur(3px)grayscale(20%);
         }
     
@@ -153,7 +139,8 @@
             right: 0;
             font-size: medium;
             font-weight: bold;
-            box-sizing: border-box;
+            max-width: 90vw;
+            overflow-wrap:normal;
         }
     
         &:hover {

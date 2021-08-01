@@ -9,7 +9,7 @@ import CancerDiagrampng from '../../resources/imgs/cancer.png'
 const Projects = () => {
     
     return(
-        <Grid container direction="row" justifyContent="center" alignItems="center" spacing={4} >
+        <Grid container direction="row" justifyContent="center" alignItems="center" spacing={6} className="bigGrid">
             <Grid item className="hoverDisplay">
                 <HoverDisplay 
                         title="Gym Form Check"
@@ -36,13 +36,13 @@ const Projects = () => {
                         onHover='video'
                         textColor = '#FFFFFF'/>
             </Grid>
-            <Grid item className="hoverDisplay" xs={3}>
+            <Grid item className="hoverDisplay" >
                 <HoverDisplay/>
             </Grid>
-            <Grid item className="hoverDisplay" xs={3}>
+            <Grid item className="hoverDisplay" >
                 <HoverDisplay/>
             </Grid>
-            <Grid item className="hoverDisplay" xs={3}>
+            <Grid item className="hoverDisplay" >
                 <HoverDisplay/>
             </Grid>
         </Grid>
