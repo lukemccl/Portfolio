@@ -1,4 +1,4 @@
-import'./section.scss'
+import '../../styles.scss'
 
 interface SectionProps {
   title: string,

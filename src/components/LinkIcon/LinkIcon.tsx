@@ -1,5 +1,5 @@
 import { Icon, SemanticICONS } from 'semantic-ui-react'
-import './LinkIcon.scss'
+import '../../styles.scss'
 
 interface IconProps {
   name: SemanticICONS,
@@ -18,17 +18,20 @@ const linkIcon = (props: IconProps) => {
     />
   );
   return (
-    props.link
-    ? <a className='ui icon link' href={props.link}>
-        {icon}
-        <br/>
-        {props.body}
-      </a>
-    : <div className='ui icon container'>
-        {icon}
-        <br/>
-        {props.body}
-      </div>
+    <div className="expandingLinksIcon">
+      {props.link
+      ? <a className='ui icon link' href={props.link}>
+          {icon}
+          <br/>
+          {props.body}
+        </a>
+      : <div>
+          {icon}
+          <br/>
+          {props.body}
+        </div>}
+    </div>
+    
     );
 }
 

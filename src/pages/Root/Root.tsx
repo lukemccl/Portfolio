@@ -15,7 +15,7 @@ const Root = () => {
   return (
     <div className="Root">
       <Router>
-        <Header location={window.location.href}/>
+        <Header />
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route exact path="/home" component={Home}></Route>

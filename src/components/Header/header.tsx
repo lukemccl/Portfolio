@@ -1,77 +1,26 @@
-import { Grid, Icon, Segment, Menu } from 'semantic-ui-react'
-import { Link } from "react-router-dom";
+import { Grid } from '@material-ui/core'
+import { GitHub, LinkedIn } from '@material-ui/icons';
+import '../../styles.scss'
+import HeaderNav from './HeaderNav/HeaderNav';
 
-import'./header.scss'
-
-interface HeaderProps {
-  location: string
-}
-
-const Header = (props: HeaderProps) =>{
-
-  function getActiveItem() {
-    let urlbreakdown = props.location.split('/')
-    return urlbreakdown[3].length>0 ? urlbreakdown[3] : 'home'
-  }
-
+const Header = () =>{
   return (
-    <Segment inverted>
-      <Menu inverted horizontal secondary pointed stackable>
-      <Grid columns={6} container>
-        <Grid.Row >
-          <Grid.Column>
-              <div className="nameBar verticalCenter">Luke McClure</div>
-          </Grid.Column>
-          <Grid.Column className='menuBar verticalCenter'>
-            <Menu.Item className="headerMenuItem"
-              name='home'
-              active={getActiveItem() === 'home'}
-              as={Link}  to='/home'
-            />
-          </Grid.Column>
-          <Grid.Column className='menuBar verticalCenter'>
-            <Menu.Item className="headerMenuItem"  
-            name='projects'
-            active={getActiveItem()  === 'projects'}
-            as={Link}  to='/projects'
-            />
-          </Grid.Column>
-          <Grid.Column className='menuBar verticalCenter'>
-            <Menu.Item className="headerMenuItem"  
-              name='passions'
-              active={getActiveItem() === 'passions'}
-              as={Link}  to='/passions'
-            />
-          </Grid.Column>
-          <Grid.Column className='menuBar verticalCenter'>
-            <Menu.Item className="headerMenuItem"  
-              name='contact'
-              active={getActiveItem() === 'contact'}
-              as={Link}  to='/contact'
-            />
-          </Grid.Column>
-          <Grid.Column className='linksBar'>
-            <Segment inverted >
-              <a href="https://github.com/lukemccl" className='links'> 
-                <Icon 
-                  name='github'
-                  size='big'
-                  color='grey'
-                />
-              </a>
-              <a href="https://www.linkedin.com/in/luke-mcclure/"  className='links'>  
-                <Icon 
-                  name='linkedin'
-                  size='big'
-                  color='grey'
-                />
-              </a>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
+    <Grid className="header" container direction='row' justifyContent='space-between' alignItems='center'>
+      <Grid item>
+        <div className="nameBar"> Luke McClure</div>
       </Grid>
-      </Menu>
-    </Segment>
+      <Grid item>
+        <HeaderNav location={window.location.href}/>
+      </Grid>
+      <Grid item>
+        <a href="https://github.com/lukemccl" className="headerLinksIcon"> 
+          <GitHub fontSize='large'/>
+        </a>
+        <a href="https://www.linkedin.com/in/luke-mcclure/" className="headerLinksIcon">  
+          <LinkedIn fontSize='large'/>
+        </a>
+      </Grid>
+    </Grid>
   )
 }
 

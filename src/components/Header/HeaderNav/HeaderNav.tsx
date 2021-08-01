@@ -1,4 +1,4 @@
-import { Grid, Menu } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 
 import '../header.scss';
@@ -11,40 +11,33 @@ const HeaderNav = (props: HeaderNavProps) => {
 
   function getActiveItem() {
     let urlbreakdown = props.location.split('/')
-    return urlbreakdown[3].length>0 ? urlbreakdown[3] : 'home'
+    return ''// urlbreakdown[3].length>0 ? urlbreakdown[3] : 'home'
+    //temporarily break active item while trying to find solution
   }
 
   return (
-    <div>
-      <Grid.Column className='menuBar verticalCenter'>
+    <Menu secondary inverted stackable>
             <Menu.Item className="headerMenuItem"
               name='home'
               active={getActiveItem() === 'home'}
               as={Link}  to='/home'
             />
-          </Grid.Column>
-          <Grid.Column className='menuBar verticalCenter'>
             <Menu.Item className="headerMenuItem"  
             name='projects'
             active={getActiveItem()  === 'projects'}
             as={Link}  to='/projects'
             />
-          </Grid.Column>
-          <Grid.Column className='menuBar verticalCenter'>
             <Menu.Item className="headerMenuItem"  
               name='passions'
               active={getActiveItem() === 'passions'}
               as={Link}  to='/passions'
             />
-          </Grid.Column>
-          <Grid.Column className='menuBar verticalCenter'>
             <Menu.Item className="headerMenuItem"  
               name='contact'
               active={getActiveItem() === 'contact'}
               as={Link}  to='/contact'
             />
-          </Grid.Column>
-    </div>
+    </Menu>
     )
 }
 

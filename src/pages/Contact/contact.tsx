@@ -1,7 +1,8 @@
 import Section from '../../components/Section/section'
 import LinkIcon from '../../components/LinkIcon/LinkIcon'
 
-import { Grid, Segment, Header } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
+import { Grid, Paper } from '@material-ui/core'
 
 const Contact = () => {
 
@@ -31,53 +32,38 @@ const Contact = () => {
     return(
         <div>
             <Section title="There are several ways to get in contact with me, feel free to reach out on one of the platforms listed!" color="white"/>
-            <Grid stackable >
-                <Grid.Row columns={1}>
-                    <Grid.Column>
-                        <Segment raised>
+            <Grid container direction='column' justifyContent='space-around' alignItems='center'>
+                <Grid item className="contactsCard">
+                        <Paper elevation={5} className="paperStack">
                             <Header attached='top' size='huge'>Business</Header>
                             <p>For any business enquiries I am available on these platforms:</p>
-                            <Grid stackable>
-                                <Grid.Row columns={2}>
-                                    <Grid.Column>{LinkedInPlatform}</Grid.Column>                    
-                                    <Grid.Column>{EmailPlatform}</Grid.Column>
-                                </Grid.Row>
+                            <Grid container justifyContent='center' alignItems='center'>
+                                <Grid item>{LinkedInPlatform}</Grid>                    
+                                <Grid item>{EmailPlatform}</Grid >
                             </Grid>
-                        </Segment>
-                    </Grid.Column>  
-                </Grid.Row>              
-                <Grid.Row columns={1}>
-                    <Grid.Column>
-                        <Segment raised>
+                        </Paper>
+                </Grid>            
+                <Grid item className="contactsCard">
+                    <Paper elevation={5}  className="paperStack">
                             <Header attached='top' size='huge'>Personal</Header>
-                            <p>For keeping up with my hobbies and passions, continue to check this site or check me out on any of these platforms:</p>
-                            <Grid stackable>
-                                <Grid.Row columns={2}>
-                                    <Grid.Column>{InstaPlatform}</Grid.Column>                    
-                                    <Grid.Column>{GHPlatform}</Grid.Column>
-                                </Grid.Row>
+                            <p>For keeping up with my hobbies and passions, <br/> continue to check this site or check me out on any of these platforms:</p>
+                            <Grid container justifyContent='center' alignItems='center'>
+                                    <Grid item>{InstaPlatform}</Grid>                    
+                                    <Grid item>{GHPlatform}</Grid>
                             </Grid>
-                        </Segment>
-                    </Grid.Column>  
-                </Grid.Row> 
-                <Grid.Row columns={1}>
-                    <Grid.Column>
-                        <Segment raised>
+                        </Paper>
+                </Grid>
+                <Grid item className="contactsCard">
+                    <Paper elevation={5} className="paperStack">
                         <Header attached='top' size='huge'>Further</Header>
-                    <p>Available on request:</p>
-                            <Grid stackable>
-                                <Grid.Row columns={2}>
-                                    <Grid.Column>{PhonePlatform}</Grid.Column>                    
-                                    <Grid.Column>{CVPlatform}</Grid.Column>
-                                </Grid.Row>
-                            </Grid>
-                        </Segment>
-                    </Grid.Column>  
-                </Grid.Row> 
+                        <p>Available on request:</p>
+                        <Grid container justifyContent='center' alignItems='center'>
+                            <Grid item>{PhonePlatform}</Grid>                    
+                            <Grid item>{CVPlatform}</Grid>
+                        </Grid>
+                    </Paper>
+                </Grid>
             </Grid>
-            <footer>
-            <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-            </footer>
         </div>
     );
 }

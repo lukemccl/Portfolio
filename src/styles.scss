@@ -1,9 +1,170 @@
-a {
+.linksIcon {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black;
+
     &:link {
         color:black
     }
 
     &:visited {
         color:black
+    }
+}
+
+.expandingLinksIcon {
+    @extend .linksIcon;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        color:black !important;
+        transform: scale(1.1);
+    }
+
+    a {
+        &:link {
+            color:black
+        }
+    
+        &:visited {
+            color:black
+        }
+    }
+}
+
+.header {
+    background-color: black;
+    color: white;
+    font-size: large;
+
+    .profilePic {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        margin-right: 1vw;
+    }
+
+    .nameBar {
+        display: flex;
+        margin-left: 0.5vw;
+    }
+
+    .headerLinksIcon {
+        @extend .linksIcon;
+        color: #b3b3b3;
+        margin-right: 1vw;
+        filter: invert(70%);
+
+        &:hover {
+            color: white;
+            filter: invert(0%);
+            transform: scale(1.1);
+        }
+    }
+}
+
+.contactsCard {
+    max-width: 95vw;
+    min-width: 25vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .paperStack {
+        padding-bottom: 5px;
+    }
+}
+
+.sectionBackground{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 25vw;
+}
+
+.sectionBody{
+    font-size: medium;
+}
+
+.sectionTitle{
+    font-weight: bold;
+    font-size: large;
+}
+
+.hoverDisplayContainer {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.hoverDisplay {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hoverDisplayCard {
+    background-color: #fafafa;
+
+    margin-left: 10px;    
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    min-height: 20vh;
+    height: 50%;
+    display: flex;
+    
+    .project {
+        color: white;
+        display: flex;
+  
+        a {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            min-width: 10px;
+            min-height: 10px;
+            max-width: 480px;
+            max-height: 360px;
+        }
+
+        video, img {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            max-width: 480px;
+            max-height: 360px;
+            filter: blur(3px)grayscale(20%);
+        }
+    
+        div {
+            position: absolute;
+            color:white;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: medium;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+    
+        &:hover {
+            video, img {
+                filter: blur(0px)
+            }
+        }
+    }
+
+    .more {
+        font-size: medium;
+        font-weight: bold;
     }
 }
