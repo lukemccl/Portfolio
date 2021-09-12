@@ -1,4 +1,5 @@
 import HoverDisplay from '../../components/HoverDisplay/HoverDisplay'
+import Section from '../../components/Section/section'
 import { Grid } from '@material-ui/core'
 import '../../styles.scss'
 
@@ -12,6 +13,10 @@ const Projects = () => {
     return(
         <section id="projects-item">
             <a className="anchor" id="projects"></a>
+            <Section 
+                title="Projects"
+                color="white"
+            />
             <Grid container direction="row" justifyContent="center" alignItems="center" spacing={6} className="bigGrid">
                 <Grid item className="hoverDisplay">
                     <HoverDisplay 

@@ -32,7 +32,10 @@ const Contact = () => {
     return(
         <section id="contact-item">
             <a className="anchor" id="contact"></a>
-            <Section title="There are several ways to get in contact with me, feel free to reach out on one of the platforms listed!" color="white"/>
+            <Section 
+                title="Contact"
+                body="There are several ways to get in contact with me, feel free to reach out on one of the platforms listed!" 
+                color="white"/>
             <Grid container justifyContent='space-around' alignItems='center'>
                 <Grid item className="contactsCard">
                         <Paper elevation={5} className="paperStack">
