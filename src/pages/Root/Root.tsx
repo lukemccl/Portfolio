@@ -5,7 +5,6 @@ import About from "../About/about"
 import Projects from "../Projects/projects"
 import Passions from "../Passions/passions"
 import Contact from "../Contact/contact"
-import NotFound from "../404/notfound"
 
 const Root = () => {
   return (

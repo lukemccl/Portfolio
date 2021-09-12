@@ -3,11 +3,11 @@ import { GitHub, LinkedIn } from '@material-ui/icons';
 
 const Header = () => {
 
-  const sections = document.querySelectorAll('section');
-  const menuItems = document.querySelectorAll('a.item.headerMenuItem');
-
   window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const menuItems = document.querySelectorAll('a.item.headerMenuItem');
     let activeItem = '';
+
     sections.forEach( section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
@@ -15,14 +15,14 @@ const Header = () => {
       if (window.pageYOffset >= (sectionTop - sectionHeight / 4)) {
         activeItem = section.id;
       }
-    })
+    });
 
     menuItems.forEach( menuItem => {
       menuItem.classList.remove('active');
       if(menuItem.classList.contains(activeItem)){
         menuItem.classList.add('active');
       }
-    })
+    });
   });
 
   return (
