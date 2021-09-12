@@ -12,7 +12,7 @@ const Header = () => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
 
-      if (window.pageYOffset >= (sectionTop - sectionHeight / 4)) {
+      if (window.pageYOffset >= (sectionTop - sectionHeight / 3)) {
         activeItem = section.id;
       }
     });

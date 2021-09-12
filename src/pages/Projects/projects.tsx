@@ -7,6 +7,7 @@ import Websitemp4 from '../../resources/videos/website.mp4'
 import GymFormCheckmp4 from '../../resources/videos/diss.mp4'
 import MountainCarmp4 from '../../resources/videos/mountaincar.mp4'
 import CancerDiagrampng from '../../resources/imgs/cancer.png'
+import CarsMLpng from '../../resources/imgs/cars.png'
 
 const Projects = () => {
     
@@ -48,15 +49,16 @@ const Projects = () => {
                     <HoverDisplay
                         title="ML Labs"
                         background={MountainCarmp4}
-                        desc="A series of Reinforcement Learning and Deep Learning labs completed in my final year"
+                        desc="A series of Reinforcement Learning and Deep Learning labs involving many skills in the two fields"
                         link="https://github.com/lukemccl/ML-Labs"
                         onHover="video"/>
                 </Grid>
                 <Grid item className="hoverDisplay" >
                     <HoverDisplay
                         title="Used Cars ML"
-                        desc=""
-                        link=""
+                        background={CarsMLpng}
+                        desc="EDA and exploring models to best predict the price of used cars from craigslist"
+                        link="https://github.com/lukemccl/UsedCarsML"
                         onHover="img"/>
                 </Grid>
                 <Grid item className="hoverDisplay" >
